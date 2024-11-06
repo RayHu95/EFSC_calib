@@ -1,6 +1,8 @@
 # A Dynamic Calibration Framework for Event-frame Stereo Camera (EFSC) System
 
-
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=LCYqNZBBT6s" target="_blank">
+  <img src = "/pic/workflow.jpg" width = 95%  alt="The calibration diagram for the EFSC system." >
+</a>
 
 **Abstract**: Our paper develops a dynamic calibration framework for the event-frame stereo camera system. ... 
 In this framework, the first step is to complete the initial detection on a **circle-grid calibration pattern**, and **a sliding-window time matching method** is proposed to match the event-frame pairs. Then, a
