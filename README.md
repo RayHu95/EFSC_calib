@@ -1,7 +1,7 @@
 # A Dynamic Calibration Framework for Event-frame Stereo Camera (EFSC) System
 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=LCYqNZBBT6s" target="_blank">
-  <img src = "/pic/workflow.jpg" width = 95%  alt="The calibration diagram for the EFSC system." >
+  <img src = "/pic/workflow_play.jpg" width = 100%  alt="The calibration diagram for the EFSC system." >
 </a>
 
 **Abstract**: Our paper develops a dynamic calibration framework for the event-frame stereo camera system. ... 
