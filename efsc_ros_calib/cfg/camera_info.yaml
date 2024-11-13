@@ -1,0 +1,27 @@
+IsInitialed: true
+# if IsInitialed, provide the Intrinsic Matrix please. the code will calibrate the extrinsic of two cameras.
+# if not, the code can calibrate the Intrinsic Matrix
+OptimizeNum: 50
+InitialNum: 30
+
+cam_fr:
+  camera_model: pinhole
+  resolution: [848, 480]
+  intrinsics: [600.924, 600.924, 423.5, 239.5]
+  distortion_coeffs: [ 0.155446, -0.267778, -0.00449885, -0.0103823, 0]
+  distortion_model: radtan
+
+cam_es:
+  camera_model: pinhole
+  resolution: [346, 260]
+  intrinsics: [435.012, 435.012, 172.5, 129.5]
+  distortion_coeffs: [-0.397306, 0.273785, -0.000602553, -0.000417849, 0]
+  distortion_model: radtan
+
+g2o:
+  huber_es: 0.3
+  huber_fr: 0.3
+  huber_estofr: 0.3
+  huber_frtoes: 0.5
+  calib_flag: true # if true, the calib thread will run; otherwise, the calib thread is blocked.
+

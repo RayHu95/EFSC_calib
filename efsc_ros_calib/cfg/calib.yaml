@@ -1,0 +1,33 @@
+---
+ picker:
+  frameEventNumThreshold: 5000
+  detect:
+    dbscan_eps: 4            # pixel unit
+    dbscan_startMinSample: 2
+    clusterMinSample: 10     # related with total event num.
+    knn_num: 3               # k nearest neighbor
+
+ pattern:
+  motionTimeStep: 500
+  isAsymmetric: true
+  grid: [7, 2]
+  circleRadius: 0.875  #1.42cm 0.71;    1.75 cm 0.875
+  squareSize: 3.889 #tan4.43cm 3.1325;  5.5 cm 3.889
+
+ calib:
+  # Consider only fy as a free parameter, the ratio fx/fy stays the same as in the input cameraMatrix.
+  # Use or not setting. 0 - False Non-Zero
+  FixAspectRatio: 0
+
+  # If true (non-zero) tangential distortion coefficients are set to zeros and stay zero
+  AssumeZeroTangentialDistortion: 0
+
+  # If true (non-zero) the principal point stay zero during the global optimization.
+  FixPrincipalPointAtTheCenter: 0
+
+  # If true (non-zero) distortion coefficient k* will be equals to zero.
+  FixK1: false
+  FixK2: false
+  FixK3: false
+  FixK4: true # not used
+  FixK5: true # not used

@@ -1,0 +1,21 @@
+<!-- calib_node  /-->
+<launch>
+
+    <node pkg="efsc_ros_calib" type="EFSC_calib" name="calib_node" clear_params="true" output="screen">
+	<!-- The name of this node should be consistent with the head of the topic, i.e., /calib_node/.... /-->        
+	<remap from="/calib_node/events" to="/capture_node/events" />
+        <remap from="stamped_pose" to="/calib_node/pose_pub" />
+	
+	<rosparam command="load" file="$(find efsc_ros_calib)/cfg/camera_info.yaml" />
+	<rosparam command="load" file="$(find efsc_ros_calib)/cfg/calib.yaml" />
+    </node>
+
+
+    <node pkg="rqt_gui" type="rqt_gui" name="gui"
+          args="--perspective-file $(find efsc_ros_calib)/launch/rqt/previews_debug.perspective" />
+
+    
+    <node pkg="rosbag" type="play" name="rosbag" args="/media/ray/Data/datasets/hand2.bag -r 0.8" />
+    <!--node pkg="rosbag" type="play" name="rosbag" args="/media/ray/Data/datasets/75cm.bag -r 0.8" /-->
+
+</launch>
