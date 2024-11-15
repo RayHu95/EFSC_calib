@@ -52,8 +52,8 @@ The code is for the research purpose. Please cite the following:
   journal={IEEE Robotics and Automation Letters}, 
   title={A Dynamic Calibration Framework for the Event-Frame Stereo Camera System}, 
   year={2024},
-  volume={},
-  number={},
-  pages={1-8},
+  volume={9},
+  number={12},
+  pages={11465-11472},
   doi={10.1109/LRA.2024.3491426}}
 ```
